@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hiretech - i9 Quiz</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="i9Quiz.css">
+
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser.</p>
+        <![endif]-->
+    <div class="container">
+        <div class="row">
+            <div id="i9-container" class="col-lg-7 col-md-7">
+
+                <div class="errors-container">
+
+                    <!--last name-->
+                    <div id="lname_checkbox">
+                        <input type="checkbox" id="lname" class="_checkbox" disabled="true"> 
+                        <label for="lname" class="_checkbox-label">
+                            <div class="tick_mark"></div>
+                        </label>
+                    </div>
+
+                    <!--first name-->
+                    <div id="fname_checkbox">
+                        <input type="checkbox" id="fname" class="_checkbox" disabled="true">
+                        <label for="fname" class="_checkbox-label">
+                            <div class="tick_mark"></div>
+                        </label>
+                    </div>
+
+                    <!--middle name-->
+                    <div id="mlname_checkbox">
+                        <input type="checkbox" id="mlname" class="_checkbox" disabled="true">
+                        <label for="mlname" class="_checkbox-label">
+                            <div class="tick_mark"></div>
+                        </label>
+                    </div>
+
+                    <!--address-->
+                    <div id="address_checkbox">
+                        <input type="checkbox" id="address" class="_checkbox" disabled="true">
+                        <label for="address" class="_checkbox-label">
+                            <div class="tick_mark"></div>
+                        </label>
+                    </div>
+
+                    <!--city-->
+                    <div id="city_checkbox">
+                        <input type="checkbox" id="city" class="_checkbox" disabled="true">
+                        <label for="city" class="_checkbox-label">
+                            <div class="tick_mark"></div>
+                        </label>
+                    </div>
+
+                    <!--state-->
+                    <div id="state_checkbox">
+                        <input type="checkbox" id="state" class="_checkbox" disabled="true">
+                        <label for="state" class="_checkbox-label">
+                            <div class="tick_mark"></div>
+                        </label>
+                    </div>
+
+                    <!--zip-->
+                    <div id="zip_checkbox">
+                        <input type="checkbox" id="zip" class="_checkbox" disabled="true">
+                        <label for="zip" class="_checkbox-label">
+                            <div class="tick_mark"></div>
+                        </label>
+                    </div>
+
+                    <!--dob-->
+                    <div id="dob_checkbox">
+                        <input type="checkbox" id="dob" class="_checkbox" disabled="true">
+                        <label for="dob" class="_checkbox-label">
+                            <div class="tick_mark"></div>
+                        </label>
+                    </div>
+
+                    <!--ssn-->
+                    <div id="ssn_checkbox">
+                        <input type="checkbox" id="ssn" class="_checkbox" disabled="true">
+                        <label for="ssn" class="_checkbox-label">
+                            <div class="tick_mark"></div>
+                        </label>
+                    </div>
+
+                    <!--email-->
+                    <div id="email_checkbox">
+                        <input type="checkbox" id="email" class="_checkbox" disabled="true">
+                        <label for="email" class="_checkbox-label">
+                            <div class="tick_mark"></div>
+                        </label>
+                    </div>
+
+                    <!--phone-->
+                    <div id="phone_checkbox">
+                        <input type="checkbox" id="phone" class="_checkbox" disabled="true">
+                        <label for="phone" class="_checkbox-label">
+                            <div class="tick_mark"></div>
+                        </label>
+                    </div>
+
+                    <!--citizen-->
+                    <div id="citizen_checkbox">
+                        <input type="checkbox" id="citizen" class="_checkbox" disabled="true">
+                        <label for="citizen" class="_checkbox-label">
+                            <div class="tick_mark"></div>
+                        </label>
+                    </div>
+
+                    <!--sign-->
+                    <div id="sign_checkbox">
+                        <input type="checkbox" id="sign" class="_checkbox" disabled="true">
+                        <label for="sign" class="_checkbox-label">
+                            <div class="tick_mark"></div>
+                        </label>
+                    </div>
+
+                    <!--date-->
+                    <div id="date_checkbox">
+                        <input type="checkbox" id="date" class="_checkbox" disabled="true">
+                        <label for="date" class="_checkbox-label">
+                            <div class="tick_mark"></div>
+                        </label>
+                    </div>
+
+                </div>
+
+                <!--i9 form svg-->
+                <object class="i9-svg blur-i9" data="images/i-9-paper-version.svg" type="image/svg+xml"></object>
+            </div>
+
+            <div id="scoreKeeper" class="col-lg-5 col-md-5">
+                <span class="quiz-title flux">Form I-9 Quiz</span>
+                <h1>Instructions</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                <div id="time-remaining"">Time remaining <span id="time">01:00</span>!</div>
+                <div id="results-container">
+                    <div id="neon-block-one">
+                        <span id="errors-found">Errors found </span>
+                        <span id="errors-matched">0</span>/6</span>
+                    </div>
+                    <div id="neon-block-two">
+                        <span id="missed">Co. Fines</span>
+                        $<span id="missed-total">2k</span>
+                    </div>
+                    <div id="neon-block-three">
+                        <span id="savings">You saved </span>
+                        $<span id="savings-total">0</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="buttons-container">
+        <span id="start-quiz">Star Quiz</span>
+        <span id="reset-quiz" class="disabled-game-button">Start Over</span>
+        <span id="submit-quiz" class="disabled-game-button">Submit Answers</span>
+    </div>
+    <script src="i9Quiz.js" async defer></script>
+</body>
+
+</html>
