@@ -1,0 +1,333 @@
+body {
+  background-color: #151515;
+}
+#blocker {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#scoreKeeper {
+  color: white;
+  margin-top: 50px;
+}
+#time-remaining {
+  font-size: 20px;
+  margin-top: 20px;
+  font-family: "Racing Sans One", cursive;
+}
+#i9-container {
+  padding: 20px 10px;
+  position: relative;
+}
+.errors-container .lastname {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 100px;
+  left: 0;
+  background-color: purple;
+}
+
+.quiz-title {
+  font-family: "Racing Sans One", cursive;
+  font-size: 72px;
+}
+#results-container {
+  position: relative;
+  max-width: 460px;
+  display: block;
+  height: 430px;
+}
+#errors-found,
+#savings,
+#missed {
+  font-size: 20px;
+  position: absolute;
+  bottom: 8px;
+  left: 14px;
+}
+#neon-block-one {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: black;
+  top: 70px;
+  box-shadow: -2px 12px 23px -5px #2b46f1;
+  border-radius: 24px;
+  font-family: "Racing Sans One", cursive;
+  padding: 15px;
+  font-size: 94px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #2b46f1;
+}
+#neon-block-two {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: black;
+  border-radius: 24px;
+  box-shadow: -2px 12px 23px -5px #522bf1;
+  right: 80px;
+  top: 34px;
+  margin-bottom: 25px;
+  padding: 15px;
+  font-size: 60px;
+  font-family: "Racing Sans One", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #522bf1;
+}
+#neon-block-three {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  background: black;
+  border-radius: 24px;
+  box-shadow: -2px 12px 23px -5px #0099df;
+  right: 0;
+  bottom: 0;
+  padding: 15px;
+  font-size: 94px;
+  font-family: "Racing Sans One", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #0099df;
+}
+#buttons-container {
+  position: absolute;
+  right: 0;
+  bottom:50px;
+  text-align: right;
+  padding-right:25px;
+}
+#start-quiz,
+#submit-quiz,
+#reset-quiz {
+  cursor: pointer;
+  display: block;
+  text-transform: uppercase;
+  color: white;
+  transition: all 0.5s;
+  font-size: 3rem;
+  font-family: "Racing Sans One", cursive;
+}
+
+#savings,
+#submit-quiz,
+#start-quiz,
+#reset-quiz,
+.quiz-title,
+.errors-found {
+  display: block;
+  transition: all 0.5s;
+}
+
+#submit-quiz.disabled-game-button, 
+#reset-quiz.disabled-game-button,
+#start-quiz.disabled-game-button {
+  opacity: 0.5;
+  text-decoration: line-through;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* style i9 form object contatiner*/
+#i9-container .i9-svg {
+  background-color: white;
+  -webkit-box-shadow: 0 7px 4px #000;
+  -moz-box-shadow: 0 7px 4px #000;
+  box-shadow: 0 7px 4px #000;
+  border: 5px solid #3a3a3a;
+  border-radius: 20px;
+  position: relative;
+}
+#i9-container .i9-svg.blur-i9 {
+  background-color: white;
+  -webkit-box-shadow: 0 7px 4px #000;
+  -moz-box-shadow: 0 7px 4px #000;
+  box-shadow: 0 7px 4px #000;
+  border: 5px solid #3a3a3a;
+  border-radius: 20px;
+  position: relative;
+}
+/* style for checkbox input*/
+#sign_checkbox ._checkbox-label,
+#lname_checkbox ._checkbox-label,
+#fname_checkbox ._checkbox-label,
+#mlname_checkbox ._checkbox-label,
+#address_checkbox ._checkbox-label,
+#city_checkbox ._checkbox-label,
+#state_checkbox ._checkbox-label,
+#zip_checkbox ._checkbox-label,
+#dob_checkbox ._checkbox-label,
+#ssn_checkbox ._checkbox-label,
+#email_checkbox ._checkbox-label,
+#phone_checkbox ._checkbox-label,
+#citizen_checkbox ._checkbox-label,
+#date_checkbox ._checkbox-label {
+  width: 100%;
+  height: 100%;
+}
+
+#lname_checkbox {
+  position: absolute;
+  top: 23%;
+  left: 8%;
+  width: 26%;
+  height: 3.5%;
+}
+#fname_checkbox {
+  position: absolute;
+  top: 23%;
+  left: 35%;
+  width: 22%;
+  height: 3.5%;
+}
+#mlname_checkbox {
+  position: absolute;
+  top: 23%;
+  left: 58.5%;
+  width: 9%;
+  height: 3.5%;
+}
+#address_checkbox {
+  position: absolute;
+  top: 26.7%;
+  left: 8%;
+  width: 31%;
+  height: 3.5%;
+}
+#city_checkbox {
+  position: absolute;
+  top: 26.7%;
+  left: 49%;
+  width: 23%;
+  height: 3.5%;
+}
+#state_checkbox {
+  position: absolute;
+  top: 26.7%;
+  left: 73%;
+  width: 5%;
+  height: 3.5%;
+}
+#zip_checkbox {
+  position: absolute;
+  top: 26.7%;
+  left: 79%;
+  width: 13%;
+  height: 3.5%;
+}
+#dob_checkbox {
+  position: absolute;
+  top: 30.7%;
+  left: 8%;
+  width: 17%;
+  height: 3.5%;
+}
+#ssn_checkbox {
+  position: absolute;
+  top: 30.7%;
+  left: 26%;
+  width: 17%;
+  height: 3.5%;
+}
+#email_checkbox {
+  position: absolute;
+  top: 30.7%;
+  left: 44%;
+  width: 26%;
+  height: 3.5%;
+}
+#phone_checkbox {
+  position: absolute;
+  top: 30.7%;
+  left: 71%;
+  width: 21%;
+  height: 3.5%;
+}
+#citizen_checkbox {
+  position: absolute;
+  top: 40%;
+  left: 8%;
+  width: 84%;
+  height: 22%;
+}
+#sign_checkbox {
+  position: absolute;
+  top: 64%;
+  left: 8%;
+  width: 51%;
+  height: 2.2%;
+}
+
+#date_checkbox {
+  position: absolute;
+  top: 64%;
+  left: 60.5%;
+  width: 31.5%;
+  height: 2.2%;
+}
+._checkbox {
+  display: none;
+}
+
+._checkbox-label {
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+}
+
+._checkbox-label:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  transition: all 0.5s;
+}
+
+._checkbox-label.addInHover:hover:before {
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+._checkbox:checked + ._checkbox-label {
+  background-color: #f72414;
+  opacity: 0.2;
+}
+
+._checkbox:checked + ._checkbox-label:before {
+  width: 0;
+  height: 0;
+}
+.flux {
+  animation: flux 4s linear infinite;
+  -moz-animation: flux 4s linear infinite;
+  -webkit-animation: flux 4s linear infinite;
+  -o-animation: flux 4s linear infinite;
+}
+@keyframes flux {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+    color: #146C80;
+  }
+}
