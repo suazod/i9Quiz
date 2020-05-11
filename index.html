@@ -52,6 +52,9 @@
                         <label for="mlname" class="_checkbox-label">
                             <div class="tick_mark"></div>
                         </label>
+                        <div class="i9form-tooltip">
+                            Middle initial is blank and would need an N/A to be correct.
+                        </div>
                     </div>
 
                     <!--address-->
@@ -92,6 +95,9 @@
                         <label for="dob" class="_checkbox-label">
                             <div class="tick_mark"></div>
                         </label>
+                        <div class="i9form-tooltip">
+                            DOB is in the wrong format. Needs to be mm/dd/yyyy.
+                        </div>
                     </div>
 
                     <!--ssn-->
@@ -108,6 +114,9 @@
                         <label for="email" class="_checkbox-label">
                             <div class="tick_mark"></div>
                         </label>
+                        <div class="i9form-tooltip">
+                            Employee’s E-mail Address is illiterate. It does not stay within the bounds of the box.
+                        </div>
                     </div>
 
                     <!--phone-->
@@ -132,6 +141,9 @@
                         <label for="sign" class="_checkbox-label">
                             <div class="tick_mark"></div>
                         </label>
+                        <div class="i9form-tooltip">
+                            Signature of Employee is missing
+                        </div>
                     </div>
 
                     <!--date-->
@@ -140,12 +152,16 @@
                         <label for="date" class="_checkbox-label">
                             <div class="tick_mark"></div>
                         </label>
+                        <div class="i9form-tooltip">
+                            Today’s date is in the wrong format. Needs to be mm/dd/yyyy.
+                        </div>
                     </div>
 
                 </div>
 
                 <!--i9 form svg-->
                 <object class="i9-svg blur-i9" data="images/i-9-paper-version.svg" type="image/svg+xml"></object>
+
             </div>
 
             <div id="scoreKeeper" class="col-lg-5 col-md-5">
@@ -156,7 +172,7 @@
                 <div id="results-container">
                     <div id="neon-block-one">
                         <span id="errors-found">Errors found </span>
-                        <span id="errors-matched">0</span>/6</span>
+                        <span id="errors-matched">0</span>/5</span>
                     </div>
                     <div id="neon-block-two">
                         <span id="missed">Co. Fines</span>

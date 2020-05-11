@@ -69,6 +69,8 @@ resetGame = (fullreset) => {
     for (let i = 0; i < formItems.length; i++) {
         //set checkboxes to false when game resets
         formItems[i].checked = false;
+        formItems[i].disabled = true;
+        formItems[i].parentElement.classList.remove('end-game')
     }
 
     //remove hover css
@@ -92,7 +94,7 @@ resetGame = (fullreset) => {
 
 startGame = () => {
     const formItems = [incorrectEmail, incorrectDob, incorrectPhone, incorrectMiddle, incorrectDate, incorrectSign, errorsFound, savings, incorrectCity, incorrectZip, incorrectCitizen, incorrectSsn, incorrectState, incorrectFname, incorrectLname, incorrectAddress];
-    const oneMinute = 10 * 1, display = document.querySelector('#time');
+    const oneMinute = 60 * 1, display = document.querySelector('#time');
 
     //set inputs back on
     for (let i = 0; i < formItems.length; i++) {
@@ -103,7 +105,10 @@ startGame = () => {
     for (let j = 0; j < labels.length; j++) {
         labels[j].classList.toggle("addInHover");
     }
-
+    errorsFound.textContent = 0;
+    savings.textContent = 0;
+    totalfines.textContent = "2K";
+    
     startQuiz.classList.add("disabled-game-button");
     submitQuiz.classList.remove("disabled-game-button");
     resetQuiz.classList.remove("disabled-game-button");
@@ -133,6 +138,7 @@ lname.addEventListener("click", (e) => {
 
 //submit quiz
 submitQuiz.addEventListener("click", () => {
+    const showIncorrectFields = [incorrectEmail, incorrectDob, incorrectMiddle, incorrectDate, incorrectSign];
     let foundErrorsCount = 0;
     if (incorrectEmail.checked) {
         score = score + 100;
@@ -168,12 +174,16 @@ submitQuiz.addEventListener("click", () => {
     savings.textContent = score.toString();
     totalfines.textContent = fines;
 
-    
-    console.log('score, ', score)
-
     resetGame(true);
     startQuiz.classList.add("disabled-game-button");
     resetQuiz.classList.remove("disabled-game-button");
+
+        //set inputs back on
+        for (let i = 0; i < showIncorrectFields.length; i++) {
+            showIncorrectFields[i].checked = true;
+            showIncorrectFields[i].disabled = true;
+            showIncorrectFields[i].parentElement.classList.add('end-game');
+        }
 });
 
 

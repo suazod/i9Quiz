@@ -103,9 +103,9 @@ body {
 #buttons-container {
   position: absolute;
   right: 0;
-  bottom:50px;
+  bottom: 50px;
   text-align: right;
-  padding-right:25px;
+  padding-right: 25px;
 }
 #start-quiz,
 #submit-quiz,
@@ -129,7 +129,7 @@ body {
   transition: all 0.5s;
 }
 
-#submit-quiz.disabled-game-button, 
+#submit-quiz.disabled-game-button,
 #reset-quiz.disabled-game-button,
 #start-quiz.disabled-game-button {
   opacity: 0.5;
@@ -275,6 +275,15 @@ body {
   width: 31.5%;
   height: 2.2%;
 }
+#email_checkbox.end-game:hover .i9form-tooltip,
+#mlname_checkbox.end-game:hover .i9form-tooltip,
+#sign_checkbox.end-game:hover .i9form-tooltip,
+#dob_checkbox.end-game:hover .i9form-tooltip,
+#date_checkbox.end-game:hover .i9form-tooltip {
+  opacity: 1;
+  pointer-events: none;
+  z-index: 9;
+}
 ._checkbox {
   display: none;
 }
@@ -323,11 +332,46 @@ body {
 @keyframes flux {
   0%,
   100% {
-    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
-    color: #28D7FE;
+    text-shadow: 0 0 1vw #1041ff, 0 0 3vw #1041ff, 0 0 10vw #1041ff,
+      0 0 10vw #1041ff, 0 0 0.4vw #8bfdfe, 0.5vw 0.5vw 0.1vw #147280;
+    color: #28d7fe;
   }
   50% {
-    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
-    color: #146C80;
+    text-shadow: 0 0 0.5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180,
+      0 0 5vw #082180, 0 0 0.2vw #082180, 0.5vw 0.5vw 0.1vw #0a3940;
+    color: #146c80;
   }
 }
+.i9form-tooltip {
+  width:200px;
+  height: auto;
+  background-color: black;
+  position: absolute;
+  left: 50%;
+  bottom: -70px;
+  display: block;
+  z-index: 0;
+  color: white;
+  padding: 10px;
+  font-size: 12px;
+  border-top: 5px solid #0099df;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 6px 13px -5px black;
+  -moz-box-shadow: 0 6px 13px -5px black;
+       box-shadow: 0 6px 13px -5px black;
+  transition: all 0.5s;
+  opacity: 0;
+  transform: translateX(-50%);
+}
+.i9form-tooltip:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #0099df;
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+} 
