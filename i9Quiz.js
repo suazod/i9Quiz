@@ -21,7 +21,7 @@ const errorsFound = document.getElementById("errors-matched");
 const savings = document.getElementById("savings-total");
 const labels = document.querySelectorAll("label._checkbox-label");
 const totalfines = document.getElementById("missed-total");
-let fines = 2000;
+let fines = 500;
 let score = 0;
 let timer;
 
@@ -85,7 +85,10 @@ resetGame = (fullreset) => {
     if (!fullreset) {
         errorsFound.textContent = 0;
         savings.textContent = 0;
-        totalfines.textContent = "2K";
+        fines = 500;
+        totalfines.textContent = "500";
+        score = 0;
+        
     }
 
 
@@ -107,8 +110,9 @@ startGame = () => {
     }
     errorsFound.textContent = 0;
     savings.textContent = 0;
-    totalfines.textContent = "2K";
-    
+    totalfines.textContent = "500";
+    score = 0;
+
     startQuiz.classList.add("disabled-game-button");
     submitQuiz.classList.remove("disabled-game-button");
     resetQuiz.classList.remove("disabled-game-button");
@@ -146,11 +150,6 @@ submitQuiz.addEventListener("click", () => {
         foundErrorsCount++
     }
     if (incorrectDob.checked) {
-        score = score + 100;
-        fines = fines - 100;
-        foundErrorsCount++
-    }
-    if (incorrectPhone.checked) {
         score = score + 100;
         fines = fines - 100;
         foundErrorsCount++
