@@ -21,6 +21,9 @@ const errorsFound = document.getElementById("errors-matched");
 const savings = document.getElementById("savings-total");
 const labels = document.querySelectorAll("label._checkbox-label");
 const totalfines = document.getElementById("missed-total");
+const tooltips = document.querySelectorAll(".i9form-tooltip")
+
+console.log(tooltips)
 let fines = 500;
 let score = 0;
 let timer;
@@ -57,7 +60,7 @@ startTimer = (duration, display, status) => {
         seconds = "00";
         display.textContent = minutes + ":" + seconds;
         clearInterval(startCount)
-        
+
     }
 }
 
@@ -73,11 +76,6 @@ resetGame = (fullreset) => {
         formItems[i].parentElement.classList.remove('end-game')
     }
 
-    //remove hover css
-    for (let j = 0; j < labels.length; j++) {
-        labels[j].classList.remove("addInHover");
-    }
-
     startQuiz.classList.remove("disabled-game-button");
     submitQuiz.classList.add("disabled-game-button");
     resetQuiz.classList.add("disabled-game-button");
@@ -88,7 +86,7 @@ resetGame = (fullreset) => {
         fines = 500;
         totalfines.textContent = "500";
         score = 0;
-        
+
     }
 
 
@@ -102,11 +100,17 @@ startGame = () => {
     //set inputs back on
     for (let i = 0; i < formItems.length; i++) {
         formItems[i].disabled = false;
+        formItems[i].style.display = "contents";
+    }
+
+    //show tooltips css
+    for (let j = 0; j < tooltips.length; j++) {
+        tooltips[j].style.display = "block";
     }
 
     //add hover css
     for (let j = 0; j < labels.length; j++) {
-        labels[j].classList.toggle("addInHover");
+        labels[j].classList.add("addInHover");
     }
     errorsFound.textContent = 0;
     savings.textContent = 0;
@@ -143,6 +147,8 @@ lname.addEventListener("click", (e) => {
 //submit quiz
 submitQuiz.addEventListener("click", () => {
     const showIncorrectFields = [incorrectEmail, incorrectDob, incorrectMiddle, incorrectDate, incorrectSign];
+    const formItems = [incorrectPhone, incorrectMiddle, incorrectDate, incorrectCity, incorrectZip, incorrectCitizen, incorrectSsn, incorrectState, incorrectFname, incorrectLname, incorrectAddress];
+
     let foundErrorsCount = 0;
     if (incorrectEmail.checked) {
         score = score + 100;
@@ -177,13 +183,24 @@ submitQuiz.addEventListener("click", () => {
     startQuiz.classList.add("disabled-game-button");
     resetQuiz.classList.remove("disabled-game-button");
 
-        //set inputs back on
-        for (let i = 0; i < showIncorrectFields.length; i++) {
-            showIncorrectFields[i].checked = true;
-            showIncorrectFields[i].disabled = true;
-            showIncorrectFields[i].parentElement.classList.add('end-game');
-        }
+    //set inputs back on
+    for (let i = 0; i < showIncorrectFields.length; i++) {
+        showIncorrectFields[i].checked = true;
+        showIncorrectFields[i].disabled = true;
+        showIncorrectFields[i].parentElement.classList.add('end-game');
+    }
+    //set inputs back on
+    for (let i = 0; i < formItems.length; i++) {
+        formItems[i].parentElement.classList.add('end-game');
+    }
 });
+
+//remove tooltips css
+for (let j = 0; j < tooltips.length; j++) {
+    tooltips[j].style.display = "none";
+}
+
+
 
 
 
