@@ -67,8 +67,8 @@ body {
 }
 #neon-block-two {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 140px;
   background: black;
   border-radius: 24px;
   box-shadow: -2px 12px 23px -5px #522bf1;
@@ -85,13 +85,13 @@ body {
 }
 #neon-block-three {
   position: absolute;
-  width: 230px;
-  height: 230px;
+  width: 200px;
+  height: 200px;
   background: black;
   border-radius: 24px;
   box-shadow: -2px 12px 23px -5px #0099df;
-  right: 0;
-  bottom: 0;
+  right: 28px;
+  bottom: 34px;
   padding: 15px;
   font-size: 94px;
   font-family: "Racing Sans One", cursive;
@@ -394,11 +394,49 @@ body {
 	-webkit-animation: slit-in-vertical 0.75s ease-out 1s both;
 	        animation: slit-in-vertical 0.75s ease-out 1s both;
 }
+.pulsate-fwd {
+	-webkit-animation: pulsate-fwd 1s ease-in-out infinite both;
+          animation: pulsate-fwd 1s ease-in-out infinite both;
+          color:red;
+          font-weight: bolder;
+          display: inline-block;
+          transform-style: preserve-3d;
+}
+
 /**
  * ----------------------------------------
- * animation slit-in-vertical
+ * animation pulsate-fwd
  * ----------------------------------------
  */
+@-webkit-keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
  @-webkit-keyframes slit-in-vertical {
   0% {
     -webkit-transform: translateZ(-800px) rotateY(90deg);

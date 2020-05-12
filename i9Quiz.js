@@ -1,4 +1,5 @@
 const formItems = [];
+const timeContainer = document.getElementById("time");
 const lname = document.getElementById("lname");
 const startQuiz = document.getElementById("start-quiz");
 const resetQuiz = document.getElementById("reset-quiz");
@@ -21,7 +22,7 @@ const errorsFound = document.getElementById("errors-matched");
 const savings = document.getElementById("savings-total");
 const labels = document.querySelectorAll("label._checkbox-label");
 const totalfines = document.getElementById("missed-total");
-const tooltips = document.querySelectorAll(".i9form-tooltip")
+const tooltips = document.querySelectorAll(".i9form-tooltip");
 
 console.log(tooltips)
 let fines = 500;
@@ -73,12 +74,13 @@ resetGame = (fullreset) => {
         //set checkboxes to false when game resets
         formItems[i].checked = false;
         formItems[i].disabled = true;
-        formItems[i].parentElement.classList.remove('end-game')
+        formItems[i].parentElement.classList.remove('end-game');
     }
 
     startQuiz.classList.remove("disabled-game-button");
     submitQuiz.classList.add("disabled-game-button");
     resetQuiz.classList.add("disabled-game-button");
+    timeContainer.classList.remove("pulsate-fwd");
 
     if (!fullreset) {
         errorsFound.textContent = 0;
@@ -86,7 +88,6 @@ resetGame = (fullreset) => {
         fines = 500;
         totalfines.textContent = "500";
         score = 0;
-
     }
 
 
@@ -120,7 +121,7 @@ startGame = () => {
     startQuiz.classList.add("disabled-game-button");
     submitQuiz.classList.remove("disabled-game-button");
     resetQuiz.classList.remove("disabled-game-button");
-
+    timeContainer.classList.add("pulsate-fwd");
     startTimer(oneMinute, display, 'start');
 }
 
